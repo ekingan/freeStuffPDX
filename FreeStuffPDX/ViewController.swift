@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -23,10 +24,40 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         imageView.image = image
         navigationItem.titleView = imageView
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        
     }
     
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        tableView.reloadData()
+    }
+    
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Post")
+        
+        do {
+            let results = try context.executeFetchRequest(fetchRequest)
+            self.posts = results as! [Post]
+            
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
+            let post = posts[indexPath.row]
+            cell.configureCell(post)
+            return cell
+        } else {
+            return PostCell()
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
