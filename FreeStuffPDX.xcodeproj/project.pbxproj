@@ -16,6 +16,7 @@
 		C39CF4801D25D36900603068 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF47E1D25D36900603068 /* Post+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		C39CF4811D25D36900603068 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF47F1D25D36900603068 /* Post.swift */; settings = {ASSET_TAGS = (); }; };
 		C39CF4831D25D4DD00603068 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF4821D25D4DD00603068 /* PostCell.swift */; settings = {ASSET_TAGS = (); }; };
+		C39CF4851D25DE7400603068 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF4841D25DE7400603068 /* CreatePostViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C39CF47E1D25D36900603068 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Post+CoreDataProperties.swift"; path = "../Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C39CF47F1D25D36900603068 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
 		C39CF4821D25D4DD00603068 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C39CF4841D25DE7400603068 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C39CF4681D247FCA00603068 /* ViewController.swift */,
+				C39CF4841D25DE7400603068 /* CreatePostViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39CF4691D247FCA00603068 /* ViewController.swift in Sources */,
+				C39CF4851D25DE7400603068 /* CreatePostViewController.swift in Sources */,
 				C39CF4801D25D36900603068 /* Post+CoreDataProperties.swift in Sources */,
 				C39CF4671D247FCA00603068 /* AppDelegate.swift in Sources */,
 				C39CF46F1D247FCA00603068 /* FreeStuffPDX.xcdatamodeld in Sources */,

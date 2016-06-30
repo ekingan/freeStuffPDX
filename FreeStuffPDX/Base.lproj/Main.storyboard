@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="1179" y="331"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Post View Controller-->
         <scene sceneID="ZkT-gg-8DO">
             <objects>
-                <viewController id="1fe-UT-iTa" sceneMemberID="viewController">
+                <viewController id="1fe-UT-iTa" customClass="CreatePostViewController" customModule="FreeStuffPDX" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="afc-VC-u5X"/>
                         <viewControllerLayoutGuide type="bottom" id="Jfd-5C-I8g"/>
@@ -126,7 +126,7 @@
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0k0-4n-UMR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0k0-4n-UMR">
                                 <rect key="frame" x="180" y="236" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="T9u-1F-dH4"/>
@@ -137,6 +137,9 @@
                                 <rect key="frame" x="180" y="236" width="240" height="240"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="+ ADD IMAGE"/>
+                                <connections>
+                                    <action selector="addImage:" destination="1fe-UT-iTa" eventType="touchUpInside" id="Wj8-Xp-emI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-su-OzB">
                                 <rect key="frame" x="223" y="497" width="153" height="39"/>
@@ -149,6 +152,9 @@
                                 <state key="normal" title="POST">
                                     <color key="titleColor" red="0.94187973479999998" green="0.94187973479999998" blue="0.94187973479999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createPost:" destination="1fe-UT-iTa" eventType="touchUpInside" id="ogs-tb-Fcn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,6 +180,13 @@
                             <constraint firstItem="1JG-60-JVW" firstAttribute="top" secondItem="Yzo-53-gb3" secondAttribute="bottom" constant="13" id="zTa-sf-cf1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addPostBtn" destination="eGD-su-OzB" id="8gh-xX-Z87"/>
+                        <outlet property="postDesc" destination="kB1-f6-7Pk" id="fJi-vz-rf3"/>
+                        <outlet property="postImg" destination="0k0-4n-UMR" id="NgL-dE-5D8"/>
+                        <outlet property="postLocation" destination="1JG-60-JVW" id="63F-i9-zP5"/>
+                        <outlet property="postTitle" destination="Yzo-53-gb3" id="GMl-OU-hCp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azb-Y4-mgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
