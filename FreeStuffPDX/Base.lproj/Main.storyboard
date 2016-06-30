@@ -91,6 +91,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Nt0-8Y-IWI" id="OgJ-T0-9ig"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,23 +111,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-53-gb3">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-53-gb3">
                                 <rect key="frame" x="20" y="100" width="560" height="30"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JG-60-JVW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1JG-60-JVW">
                                 <rect key="frame" x="20" y="143" width="560" height="30"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-f6-7Pk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kB1-f6-7Pk">
                                 <rect key="frame" x="20" y="186" width="560" height="30"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0k0-4n-UMR">
+                                <rect key="frame" x="180" y="236" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="T9u-1F-dH4"/>
+                                    <constraint firstAttribute="width" constant="240" id="ug5-29-B7E"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cF-fk-dlk">
+                                <rect key="frame" x="180" y="236" width="240" height="240"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="+ ADD IMAGE"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-su-OzB">
+                                <rect key="frame" x="223" y="497" width="153" height="39"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="9hu-vH-9SM"/>
+                                    <constraint firstAttribute="height" constant="39" id="TkU-mB-tcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" red="0.94187973479999998" green="0.94187973479999998" blue="0.94187973479999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kB1-f6-7Pk" firstAttribute="top" secondItem="1JG-60-JVW" secondAttribute="bottom" constant="13" id="16I-AO-gdr"/>
+                            <constraint firstItem="1JG-60-JVW" firstAttribute="leading" secondItem="yYT-pn-oaS" secondAttribute="leadingMargin" id="3OL-Ei-W5L"/>
+                            <constraint firstItem="8cF-fk-dlk" firstAttribute="width" secondItem="0k0-4n-UMR" secondAttribute="width" id="3sn-yy-sgj"/>
+                            <constraint firstItem="0k0-4n-UMR" firstAttribute="centerX" secondItem="Yzo-53-gb3" secondAttribute="centerX" id="Fe4-xb-E7Y"/>
+                            <constraint firstItem="0k0-4n-UMR" firstAttribute="top" secondItem="kB1-f6-7Pk" secondAttribute="bottom" constant="20" id="Hr5-1p-isC"/>
+                            <constraint firstItem="Yzo-53-gb3" firstAttribute="leading" secondItem="yYT-pn-oaS" secondAttribute="leadingMargin" id="IDM-Qy-h7N"/>
+                            <constraint firstItem="8cF-fk-dlk" firstAttribute="height" secondItem="0k0-4n-UMR" secondAttribute="height" id="IW7-2s-vd8"/>
+                            <constraint firstItem="kB1-f6-7Pk" firstAttribute="trailing" secondItem="yYT-pn-oaS" secondAttribute="trailingMargin" id="Nuu-Jb-Uyp"/>
+                            <constraint firstItem="eGD-su-OzB" firstAttribute="top" secondItem="8cF-fk-dlk" secondAttribute="bottom" constant="21" id="cN2-dC-LWp"/>
+                            <constraint firstItem="1JG-60-JVW" firstAttribute="centerX" secondItem="Yzo-53-gb3" secondAttribute="centerX" id="cra-fu-ZBQ"/>
+                            <constraint firstItem="Yzo-53-gb3" firstAttribute="top" secondItem="afc-VC-u5X" secondAttribute="bottom" constant="36" id="eqb-zC-eKs"/>
+                            <constraint firstItem="8cF-fk-dlk" firstAttribute="centerX" secondItem="0k0-4n-UMR" secondAttribute="centerX" id="iQW-Iq-akU"/>
+                            <constraint firstItem="kB1-f6-7Pk" firstAttribute="leading" secondItem="yYT-pn-oaS" secondAttribute="leadingMargin" id="kS1-SO-0iA"/>
+                            <constraint firstItem="1JG-60-JVW" firstAttribute="trailing" secondItem="yYT-pn-oaS" secondAttribute="trailingMargin" id="kwh-up-w9p"/>
+                            <constraint firstItem="kB1-f6-7Pk" firstAttribute="centerX" secondItem="Yzo-53-gb3" secondAttribute="centerX" id="lT2-FC-cMd"/>
+                            <constraint firstItem="Yzo-53-gb3" firstAttribute="trailing" secondItem="yYT-pn-oaS" secondAttribute="trailingMargin" id="n0v-2T-hrD"/>
+                            <constraint firstItem="8cF-fk-dlk" firstAttribute="centerY" secondItem="0k0-4n-UMR" secondAttribute="centerY" id="qN4-xc-Qcb"/>
+                            <constraint firstItem="eGD-su-OzB" firstAttribute="centerX" secondItem="yYT-pn-oaS" secondAttribute="centerX" id="wE9-4F-yz6"/>
+                            <constraint firstItem="1JG-60-JVW" firstAttribute="top" secondItem="Yzo-53-gb3" secondAttribute="bottom" constant="13" id="zTa-sf-cf1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azb-Y4-mgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
