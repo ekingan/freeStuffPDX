@@ -13,6 +13,9 @@
 		C39CF46F1D247FCA00603068 /* FreeStuffPDX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C39CF46D1D247FCA00603068 /* FreeStuffPDX.xcdatamodeld */; };
 		C39CF4711D247FCA00603068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39CF4701D247FCA00603068 /* Assets.xcassets */; };
 		C39CF4741D247FCA00603068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39CF4721D247FCA00603068 /* LaunchScreen.storyboard */; };
+		C39CF4801D25D36900603068 /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF47E1D25D36900603068 /* Post+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		C39CF4811D25D36900603068 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF47F1D25D36900603068 /* Post.swift */; settings = {ASSET_TAGS = (); }; };
+		C39CF4831D25D4DD00603068 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CF4821D25D4DD00603068 /* PostCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C39CF4701D247FCA00603068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C39CF4731D247FCA00603068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C39CF4751D247FCA00603068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39CF47E1D25D36900603068 /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Post+CoreDataProperties.swift"; path = "../Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C39CF47F1D25D36900603068 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = ../Post.swift; sourceTree = "<group>"; };
+		C39CF4821D25D4DD00603068 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 		C39CF47B1D247FD700603068 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C39CF47E1D25D36900603068 /* Post+CoreDataProperties.swift */,
+				C39CF47F1D25D36900603068 /* Post.swift */,
 				C39CF46D1D247FCA00603068 /* FreeStuffPDX.xcdatamodeld */,
 			);
 			name = Model;
@@ -79,6 +87,7 @@
 			children = (
 				C39CF4721D247FCA00603068 /* LaunchScreen.storyboard */,
 				C39CF46A1D247FCA00603068 /* Main.storyboard */,
+				C39CF4821D25D4DD00603068 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -162,8 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39CF4691D247FCA00603068 /* ViewController.swift in Sources */,
+				C39CF4801D25D36900603068 /* Post+CoreDataProperties.swift in Sources */,
 				C39CF4671D247FCA00603068 /* AppDelegate.swift in Sources */,
 				C39CF46F1D247FCA00603068 /* FreeStuffPDX.xcdatamodeld in Sources */,
+				C39CF4811D25D36900603068 /* Post.swift in Sources */,
+				C39CF4831D25D4DD00603068 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
