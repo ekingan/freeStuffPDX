@@ -35,12 +35,6 @@
                                                         <constraint firstAttribute="width" constant="83" id="d6w-XH-OLh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VL-kJ-Cax">
-                                                    <rect key="frame" x="108" y="8" width="493" height="25"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSW-iU-3cs">
                                                     <rect key="frame" x="108" y="37" width="493" height="25"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -53,16 +47,22 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VL-kJ-Cax">
+                                                    <rect key="frame" x="108" y="8" width="493" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QSW-iU-3cs" firstAttribute="trailing" secondItem="ZYM-bH-92I" secondAttribute="trailingMargin" id="0Gj-sl-MpK"/>
                                                 <constraint firstItem="BnZ-5x-h5T" firstAttribute="leading" secondItem="ZYM-bH-92I" secondAttribute="leadingMargin" id="5E0-JV-Xli"/>
-                                                <constraint firstItem="vdu-Z4-oG8" firstAttribute="leading" secondItem="BnZ-5x-h5T" secondAttribute="trailing" id="7A6-0g-2u7"/>
+                                                <constraint firstItem="vdu-Z4-oG8" firstAttribute="leading" secondItem="BnZ-5x-h5T" secondAttribute="trailing" constant="4" id="7A6-0g-2u7"/>
                                                 <constraint firstItem="BnZ-5x-h5T" firstAttribute="top" secondItem="ZYM-bH-92I" secondAttribute="topMargin" id="8oN-uJ-9wF"/>
                                                 <constraint firstItem="vdu-Z4-oG8" firstAttribute="top" secondItem="QSW-iU-3cs" secondAttribute="bottom" constant="4" id="9FE-rK-YqP"/>
                                                 <constraint firstItem="vdu-Z4-oG8" firstAttribute="top" secondItem="QSW-iU-3cs" secondAttribute="bottom" constant="4" id="9YO-4A-j5c"/>
                                                 <constraint firstItem="QSW-iU-3cs" firstAttribute="top" secondItem="9VL-kJ-Cax" secondAttribute="bottom" constant="4" id="Q2x-Qo-uIJ"/>
-                                                <constraint firstItem="QSW-iU-3cs" firstAttribute="leading" secondItem="BnZ-5x-h5T" secondAttribute="trailing" id="SpE-oT-w98"/>
+                                                <constraint firstItem="QSW-iU-3cs" firstAttribute="leading" secondItem="BnZ-5x-h5T" secondAttribute="trailing" constant="4" id="SpE-oT-w98"/>
                                                 <constraint firstItem="9VL-kJ-Cax" firstAttribute="top" secondItem="ZYM-bH-92I" secondAttribute="topMargin" id="UU0-Km-qWT"/>
                                                 <constraint firstItem="9VL-kJ-Cax" firstAttribute="leading" secondItem="BnZ-5x-h5T" secondAttribute="trailing" constant="8" id="asV-xN-l0Y"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BnZ-5x-h5T" secondAttribute="bottom" id="bsi-aa-kjL"/>
@@ -71,6 +71,12 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="vdu-Z4-oG8" secondAttribute="bottom" constant="1" id="wID-tg-LFn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postDesc" destination="vdu-Z4-oG8" id="ciA-BT-lw1"/>
+                                            <outlet property="postImg" destination="BnZ-5x-h5T" id="MB1-FH-aTK"/>
+                                            <outlet property="postLocation" destination="QSW-iU-3cs" id="XAs-s1-VIj"/>
+                                            <outlet property="postTitle" destination="9VL-kJ-Cax" id="mNj-C1-mK6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

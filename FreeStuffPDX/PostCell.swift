@@ -24,7 +24,7 @@ class PostCell: UITableViewCell {
 
     func configureCell(post: Post) {
         postTitle.text = post.title
-        postDesc.text = post.description
+        postDesc.text = post.desc
         postLocation.text = post.location
         postImg.image = post.getPostImage()
     }
